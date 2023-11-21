@@ -1,0 +1,88 @@
+.game-area {
+    width: 800px;
+    height: 800px;
+    position: relative; 
+    background-image: url(./floor.png);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 10.56%;
+}
+
+
+
+.character {
+    width: 75px;
+    height: 75px;
+ 
+    background-image: url('./character.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 58%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    transition: left .5s ease-in-out, top .5s linear; /* Smooth movement */
+}
+
+.key, .door {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.key {
+    width: 50px;
+    height: 50px;
+    background-image: url('./key.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.door {
+    width: 100px;
+    height: 100px;
+    background-image: url('./door.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.wall {
+    width: 100px;
+    height: 100px;
+    background-image: url('./wall.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+#win-message{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: 'Press Start 2P', cursive;
+    z-index: 1;
+}
+
+.wobble-animation {
+    animation: wobble 0.5s ease-in-out infinite;
+}
+
+@keyframes wobble {
+    0%, 100% { transform: translate(-50%, -50%) rotate(-5deg); }
+    50% { transform: translate(-50%, -50%) rotate(5deg); }
+}
+
